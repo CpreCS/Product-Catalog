@@ -16,6 +16,17 @@ main{
   margin: auto;
 }
 
+/* Hide Main Content for Cart Overlay Except Cart Button + Cart Button Text Resize*/
+.filters.hidden,
+.search.hidden,
+#product-list.hidden,
+.cart-count.hidden{
+  display: none;
+}
+.cart-btn.active{
+  font-size: 1rem;
+}
+
 .filters{
   display: flex;
   justify-content:start;
@@ -35,9 +46,16 @@ main{
 .filters button:focus{
   background-color: #d9d9d8;
 }
+
 .filters button[autofocus]:focus{
   background-color: #d9d9d8;
   outline: none;
+}
+
+.filters button:hover{
+  background-color: #d9d9d8;
+  border-color: #bfbfbe;
+  cursor: pointer;
 }
 
 .cart-wrapper{
@@ -45,13 +63,18 @@ main{
   right: 5rem;
   top: 2rem;
 }
-.cart-wrapper button {
+
+.cart-btn{
   border: 1px solid #c4c4c3;
   border-radius: 1rem;
   cursor: pointer;
   padding: .3rem 1rem;
   font-size: .8rem;
   background-color: #e9eae9;
+}
+.cart-btn:hover{
+  background-color: #d9d9d8;
+  border-color: #bfbfbe;
 }
 
 .cart-wrapper button i{

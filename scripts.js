@@ -11,6 +11,38 @@ function cartCount(){
   console.log(cart.length)
 } 
 
+function hideContent(){
+  const viewCart = document.querySelector('.cart-btn');
+  const filters = document.querySelector('.filters');
+  const search = document.querySelector('.search');
+  const products = document.getElementById('product-list');
+  const cartCount = document.querySelector('.cart-count');
+  let cartOpen = false;
+
+  viewCart.addEventListener('click', ()=>{
+    if(!cartOpen){
+      history.replaceState({}, '','/index.html/cart');
+      filters.classList.add('hidden');
+      search.classList.add('hidden');
+      products.classList.add('hidden');
+      cartCount.classList.add('hidden');
+      viewCart.classList.add('active');
+      viewCart.innerText = "Close Cart";
+      cartOpen = true;
+    } else{
+      history.replaceState({}, '','/index.html');
+      filters.classList.remove('hidden');
+      search.classList.remove('hidden');
+      products.classList.remove('hidden');
+      cartCount.classList.remove('hidden');
+      viewCart.classList.remove('active');
+      viewCart.innerHTML = `<i class="bi bi-cart3"></i>Cart`;
+      cartOpen = false;
+    }
+  
+  });
+}
+
 //Product Card Generation
 function cardGenerate(products){
   const container = document.getElementById('product-list');
@@ -77,3 +109,5 @@ getProducts().then(data => {
       cardGenerate(filtered);
   })
 })
+
+hideContent();

@@ -73,6 +73,16 @@ function cardGenerate(products){
           console.log(`${product.title} was added to the cart.`);
           console.log(cart)
           cartCount()
+
+          //"Added" effect on add to cart click
+          const originalText = button.innerText;
+          button.innerText = "✓ Added";
+          button.style.backgroundColor = "#5cc85c";
+
+          setTimeout(() => {
+            button.innerText = originalText;
+            button.style.backgroundColor = "#736cfe";
+          }, 600);
         })
     container.appendChild(card);
   });

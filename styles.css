@@ -416,7 +416,9 @@ article img{
   }
 
   .cart-page-wrapper {
-    width: 95%;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
     padding: 1.5rem;
   }
 }

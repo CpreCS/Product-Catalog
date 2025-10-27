@@ -191,7 +191,7 @@ function cartListing(){
           </div>
           <div class="checkout-name-cost">
             <p class="checkout-name" title="${product.title}">${product.title}</p>
-            <p class="checkout-cost">${product.price.toFixed(2)}</p>
+            <p class="checkout-cost">$${product.price.toFixed(2)}</p>
           </div>
           <div class="checkout-item-count">
             <button class="decrease">-</button>

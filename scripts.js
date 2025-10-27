@@ -99,8 +99,6 @@ function cardGenerate(products){
         button.addEventListener('click', () => {
           if (button.disabled) return;
           quantCount(product);
-          console.log(`${product.title} was added to the cart.`);
-          console.log(cart)
           cartListing();
           cartCount()
 

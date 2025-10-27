@@ -422,6 +422,20 @@ article img{
 }
 
 @media (max-width: 1050px){
+  body{
+    background-color: white;
+  }
+
+  main{
+    border: none;
+    box-shadow: none;
+  }
+
+  .cart-page-wrapper{
+    border: none;
+    box-shadow: none;
+  }
+
   #product-list{
     grid-template-columns: repeat(3,1fr);
   }

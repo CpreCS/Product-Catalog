@@ -16,6 +16,7 @@ main{
   align-items: center;
   margin: auto;
   width: 1200px;
+  min-height: 95vh;
   max-width: 90%;
   margin: 2vh auto;
   padding: 2rem 2rem 1rem;
@@ -28,9 +29,6 @@ main{
 /* Hide Content for Cart Overlay*/
 .hidden{
   display: none;
-}
-.cart-btn.active{
-  font-size: 1rem;
 }
 
 .filters-cart-row{
@@ -93,8 +91,9 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: red;
+  background-color: rgb(255, 0, 0);
   color: white;
+  opacity: 0;
   text-align: center;
   aspect-ratio: 1/1;
   height: 1.5rem;
@@ -271,6 +270,7 @@ article img{
   padding-right: 0.5rem;
   scrollbar-width: thin;
   max-height: none;
+  width: 100%;
 }
 
 .item-list{
@@ -278,7 +278,6 @@ article img{
   display: flex;
   justify-content: start;
   align-items: center;
-  margin: 0rem .1px;
   width: 100%;
   overflow: visible;
   box-shadow: 0px -1px 0px #dedede;
@@ -289,6 +288,7 @@ article img{
   object-fit: contain;
   margin: 1rem 1.5rem 1rem .2rem;
   border-radius: 1rem;
+  background-color: #ececec;
 }
 
 .checkout-name{
@@ -361,20 +361,42 @@ article img{
   cursor: pointer;
 }
 
-.remove:active{
+.remove:hover{
   color: rgb(51, 163, 255);
+}
+
+.remove:active{
+  color: cyan;
+}
+
+.empty-cart {
+  margin-top: 3rem;
+  text-align: center;
+  color: #666;
 }
 
 .total-cost{
   display: flex;
-  flex-direction: flex-end;
   font-size: 1.2rem;
   font-weight: 500;
-  justify-content: end;
+  justify-content: space-between;
   margin-top: auto;
   padding-top: 1rem;
   width: 100%;
   color: #242424;
+}
+
+.clear{
+  color: blue;
+  cursor: pointer;
+}
+
+.clear:hover{
+  color: rgb(51, 163, 255);
+}
+
+.clear:active{
+  color: cyan;
 }
 
 
@@ -457,7 +479,6 @@ article img{
 
   .search{
     justify-content: start;
-    flex: 1;
   }
 
   .search input{
@@ -499,7 +520,8 @@ article img{
 }
 
   .cart-count{
-    left: .5rem;
+    top: 1.2rem;
+    left: .75rem;
   }
 
   /* Shopping Cart Open Styles*/

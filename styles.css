@@ -409,21 +409,21 @@ article img{
   }
 }
 
-@media (max-width: 900px) {
-  main {
-    width: 95%;
-    padding: 1.5rem;
-  }
-
-  .cart-page-wrapper {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 1.5rem;
-  }
-}
-
 @media (max-width: 1050px){
+    body{
+    background-color: white;
+  }
+
+  main{
+    border: none;
+    box-shadow: none;
+  }
+
+  .cart-page-wrapper{
+    border: none;
+    box-shadow: none;
+  }
+  
   #product-list{
     grid-template-columns: repeat(3,1fr);
   }
@@ -457,6 +457,20 @@ article img{
 
   .filters::-webkit-scrollbar-track {
     background: transparent;
+  }
+}
+
+@media (max-width: 900px) {
+  main {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .cart-page-wrapper {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1.5rem;
   }
 }
 

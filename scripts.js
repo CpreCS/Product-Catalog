@@ -103,7 +103,6 @@ function cardGenerate(products){
           cartCount()
 
           //"Added" effect on add to cart click
-          
           button.innerText = "✓ Added";
           button.disabled = true;
           button.style.backgroundColor = "#5cc85c";
